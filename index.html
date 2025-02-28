@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyush Joshi | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor Effect Canvas -->
+    <canvas id="cursor-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">PJ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="page-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content">
+                        <h1>PIYUSH JOSHI</h1>
+                        <div class="typewriter">
+                            <span id="typewriter-text"></span><span class="cursor">|</span>
+                        </div>
+                        <div class="hero-buttons mt-5">
+                            <a href="#contact" class="btn btn-primary btn-lg me-3">Contact Me</a>
+                            <a href="#projects" class="btn btn-outline-light btn-lg">View Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="about-img">
+                        <div class="img-container">
+                            <img src="https://via.placeholder.com/400x500" alt="Piyush Joshi" class="img-fluid rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="about-content">
+                        <h3>Aspiring Full-Stack Developer & Tech Enthusiast</h3>
+                        <p class="lead">Third-year B.Tech student at GH Raisoni College of Engineering, Pune, with a passion for solving real-world challenges through innovative technical solutions.</p>
+                        <p>With 15+ hackathon participations and 5 wins, I've developed strong skills in full-stack development (React.js, Node.js, Java), backend technologies (Java, Flask, Python), DSA, Machine learning, and cloud technologies (AWS). I'm proficient in Git and GitHub and known for solving complex problems quickly and adapting to new technologies.</p>
+                        <div class="about-info">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="info-item">
+                                        <span>Name:</span> Piyush Joshi
+                                    </div>
+                                    <div class="info-item">
+                                        <span>Email:</span> piyushaundhekar@gmail.com
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-item">
+                                        <span>Phone:</span> +91-7588322212
+                                    </div>
+                                    <div class="info-item">
+                                        <span>Location:</span> Pune, India
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links mt-4">
+                            <a href="https://linkedin.com/in/PIYUSH-JOSHI1" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://twitter.com/" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Bachelor of Technology in Computer Engineering</h3>
+                            <h4>GH Raisoni College of Engineering and Management, Pune</h4>
+                            <p class="education-date">2022 - 2026</p>
+                            <p class="education-gpa">Cumulative GPA: 8.37/10</p>
+                            <p class="education-courses">Relevant Coursework: Operating System, Algorithms, Artificial Intelligence, Machine Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Skills</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Languages</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span>C/C++</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Java</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>JavaScript</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Python</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>VBScript</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-layer-group"></i> Frameworks/Libraries</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span>React.js</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Node.js</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Bootstrap</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Tailwind CSS</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Git</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-database"></i> Database & IT Constructs</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span>MongoDB</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>MySQL</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Firebase</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>DSA</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>DevOps & Cloud</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://via.placeholder.com/600x400" alt="Track-v Project" class="img-fluid">
+                        </div>
+                        <div class="project-content">
+                            <h3>Track-v</h3>
+                            <p>A real-time traffic monitoring system to optimize signal timings using machine learning. Reduces daily commute time by 30%.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>YOLO</span>
+                                <span>OpenCV</span>
+                                <span>Firebase</span>
+                                <span>IoT</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn-project"><i class="fas fa-link"></i></a>
+                                <a href="#" class="btn-project"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://via.placeholder.com/600x400" alt="GREENsprit Project" class="img-fluid">
+                        </div>
+                        <div class="project-content">
+                            <h3>GREENsprit</h3>
+                            <p>A platform to combat greenwashing by enhancing transparency. Verifies tree planting and carbon offset projects with real-time fraud detection.</p>
+                            <div class="project-tech">
+                                <span>React.js</span>
+                                <span>Node.js</span>
+                                <span>Express.js</span>
+                                <span>Firebase</span>
+                                <span>API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn-project"><i class="fas fa-link"></i></a>
+                                <a href="#" class="btn-project"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://via.placeholder.com/600x400" alt="Cogno-Solutions Project" class="img-fluid">
+                        </div>
+                        <div class="project-content">
+                            <h3>Cogno-Solutions</h3>
+                            <p>An AI-driven mental health platform reducing evaluation time by 15 minutes per session. Reached over 100 users in the first six months.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Firebase</span>
+                                <span>API</span>
+                                <span>Botpress</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn-project"><i class="fas fa-link"></i></a>
+                                <a href="#" class="btn-project"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <h3 class="other-projects-title">Other Projects</h3>
+                    <div class="other-projects">
+                        <span class="other-project-item">Tatva-Ai</span>
+                        <span class="other-project-item">Goofy</span>
+                        <span class="other-project-item">Task-Assigner</span>
+                        <span class="other-project-item">Medisync</span>
+                        <span class="other-project-item">Probot</span>
+                        <span class="other-project-item">Loan_prediction</span>
+                        <span class="other-project-item">Readmission_Hospital</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Work Experience</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Java Full Stack Developer</h3>
+                                <h4>BrainOvision</h4>
+                                <p class="timeline-date">September - November 2023 (6 weeks)</p>
+                                <p>Developed core banking system using Java & MySQL. Built user management & banking operations features including fund transfers & transaction tracking.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Campus Ambassador</h3>
+                                <h4>Mycaptain</h4>
+                                <p class="timeline-date">2023</p>
+                                <p>Served as Campus Ambassador for MyCaptain's HR program. Successfully managed student outreach and program representation on campus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Achievements</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Hackathons</h3>
+                            <ul class="achievement-list">
+                                <li><span class="highlight">INTERNATIONAL 4th RANKING:</span> UST-GLOBAL D3code Company, IIC (International Innovation Challenge) Jaipur</li>
+                                <li><span class="highlight">National:</span> Tantra (winner), Next-Nitch (2nd runnerup), Vishwakarma Awards 2024 (4th place), Rackathon (Winner)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Certifications & Awards</h3>
+                            <ul class="achievement-list">
+                                <li><span class="highlight">Certifications:</span> Google Digital Marketing, TCS Communication, IBM cloud, Achievement_Drive</li>
+                                <li><span class="highlight">Awards:</span> Honored with the Engineering Excellence Award for exceptional hackathon achievements</li>
+                                <li><span class="highlight">Other:</span> Volunteer Work - Peer Teaching, Hobbies - Badminton</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>piyushaundhekar@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Phone</h3>
+                                <p>+91-7588322212</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Location</h3>
+                                <p>Pune, Maharashtra, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <h3>Connect With Me</h3>
+                            <div class="social-links">
+                                <a href="https://linkedin.com/in/PIYUSH-JOSHI1" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                                <a href="https://twitter.com/" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="https://instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="footer-logo">
+                        <h3>PJ</h3>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/PIYUSH-JOSHI1" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#page-top">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 Piyush Joshi. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#page-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
