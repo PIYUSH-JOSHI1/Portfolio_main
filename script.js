@@ -1,319 +1,374 @@
-// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialize the 3D cursor effect
-    initCursorEffect()
+    // Custom cursor effect
+    const cursor = document.querySelector(".cursor-effect")
   
-    // Initialize the typewriter effect
-    initTypewriter()
-  
-    // Initialize the navbar scroll effect
-    initNavbarScroll()
-  
-    // Initialize the back to top button
-    initBackToTop()
-  
-    // Initialize the contact form
-    initContactForm()
-  
-    // Initialize smooth scrolling for anchor links
-    initSmoothScroll()
-  })
-  
-  // 3D Cursor Effect with color sprinkling
-  function initCursorEffect() {
-    const canvas = document.getElementById("cursor-canvas")
-    const ctx = canvas.getContext("2d")
-  
-    // Set canvas size to window size
-    function resizeCanvas() {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
-  
-    resizeCanvas()
-    window.addEventListener("resize", resizeCanvas)
-  
-    // Particle class for the cursor effect
-    class Particle {
-      constructor(x, y, color) {
-        this.x = x
-        this.y = y
-        this.size = Math.random() * 5 + 2
-        this.color = color || getRandomColor()
-        this.speedX = Math.random() * 3 - 1.5
-        this.speedY = Math.random() * 3 - 1.5
-        this.opacity = 1
-        this.fadeSpeed = 0.02
-      }
-  
-      update() {
-        this.x += this.speedX
-        this.y += this.speedY
-        this.opacity -= this.fadeSpeed
-        this.size -= 0.05
-      }
-  
-      draw() {
-        ctx.globalAlpha = this.opacity
-        ctx.fillStyle = this.color
-        ctx.beginPath()
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
-        ctx.fill()
-        ctx.globalAlpha = 1
-      }
-    }
-  
-    // Array to store particles
-    const particles = []
-  
-    // Mouse position
-    let mouseX = 0
-    let mouseY = 0
-  
-    // Track mouse movement
     document.addEventListener("mousemove", (e) => {
-      mouseX = e.clientX
-      mouseY = e.clientY
+      cursor.style.left = e.clientX + "px"
+      cursor.style.top = e.clientY + "px"
   
-      // Create particles on mouse move
-      createParticles(mouseX, mouseY, 2)
+      // Create sparkle effect on mouse move
+      createSparkle(e.clientX, e.clientY)
     })
   
-    // Create particles
-    function createParticles(x, y, count) {
-      for (let i = 0; i < count; i++) {
-        particles.push(new Particle(x, y))
-      }
+    // Create sparkle elements
+    function createSparkle(x, y) {
+      const colors = ["#4e54c8", "#8f94fb", "#4776E6", "#8E54E9"]
+      const sparkle = document.createElement("div")
+      sparkle.className = "sparkle"
+      sparkle.style.left = x + "px"
+      sparkle.style.top = y + "px"
+      sparkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
+  
+      document.body.appendChild(sparkle)
+  
+      // Remove sparkle after animation completes
+      setTimeout(() => {
+        sparkle.remove()
+      }, 1000)
     }
   
-    // Get random color
-    function getRandomColor() {
-      const colors = [
-        "#4361ee", // primary
-        "#3a0ca3", // secondary
-        "#4cc9f0", // accent
-        "#f72585", // pink
-        "#7209b7", // purple
-        "#480ca8", // deep purple
-      ]
-      return colors[Math.floor(Math.random() * colors.length)]
-    }
-  
-    // Animation loop
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-  
-      // Update and draw particles
-      for (let i = 0; i < particles.length; i++) {
-        particles[i].update()
-        particles[i].draw()
-  
-        // Remove particles that are too small or transparent
-        if (particles[i].size <= 0.5 || particles[i].opacity <= 0) {
-          particles.splice(i, 1)
-          i--
-        }
-      }
-  
-      requestAnimationFrame(animate)
-    }
-  
-    animate()
-  }
-  
-  // Typewriter effect
-  function initTypewriter() {
-    const typewriterElement = document.getElementById("typewriter-text")
-    const phrases = [
-      "Full-Stack Developer",
-      "Java Developer",
-      "Machine Learning Enthusiast",
-      "Hackathon Winner",
-      "Problem Solver",
-    ]
-  
-    let phraseIndex = 0
-    let charIndex = 0
-    let isDeleting = false
-    let typingSpeed = 100
-  
-    function type() {
-      const currentPhrase = phrases[phraseIndex]
-  
-      if (isDeleting) {
-        // Deleting text
-        typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1)
-        charIndex--
-        typingSpeed = 50
-      } else {
-        // Typing text
-        typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1)
-        charIndex++
-        typingSpeed = 100
-      }
-  
-      // If word is complete
-      if (!isDeleting && charIndex === currentPhrase.length) {
-        // Pause at the end
-        isDeleting = true
-        typingSpeed = 1000
-      } else if (isDeleting && charIndex === 0) {
-        // Move to next phrase
-        isDeleting = false
-        phraseIndex = (phraseIndex + 1) % phrases.length
-        typingSpeed = 500
-      }
-  
-      setTimeout(type, typingSpeed)
-    }
-  
-    // Start the typewriter effect
-    setTimeout(type, 1000)
-  }
-  
-  // Navbar scroll effect
-  function initNavbarScroll() {
-    const navbar = document.getElementById("mainNav")
+    // Navbar scroll effect
+    const navbar = document.querySelector(".navbar")
   
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
-        navbar.classList.add("navbar-shrink")
+        navbar.classList.add("navbar-scrolled")
       } else {
-        navbar.classList.remove("navbar-shrink")
+        navbar.classList.remove("navbar-scrolled")
       }
     })
-  }
   
-  // Back to top button
-  function initBackToTop() {
-    const backToTopButton = document.querySelector(".back-to-top")
-  
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.add("active")
-      } else {
-        backToTopButton.classList.remove("active")
-      }
-    })
-  }
-  
-  // Contact form
-  function initContactForm() {
-    const contactForm = document.getElementById("contactForm")
-  
-    if (contactForm) {
-      contactForm.addEventListener("submit", (e) => {
-        e.preventDefault()
-  
-        // Get form values
-        const name = document.getElementById("name").value
-        const email = document.getElementById("email").value
-        const subject = document.getElementById("subject").value
-        const message = document.getElementById("message").value
-  
-        // Here you would typically send the form data to a server
-        // For now, we'll just log it to the console
-        console.log("Form submitted:", { name, email, subject, message })
-  
-        // Show success message (in a real app, you'd do this after successful submission)
-        alert("Thank you for your message! I will get back to you soon.")
-  
-        // Reset the form
-        contactForm.reset()
-      })
-    }
-  }
-  
-  // Smooth scrolling for anchor links
-  function initSmoothScroll() {
+    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault()
   
         const targetId = this.getAttribute("href")
-  
-        if (targetId === "#") return
+        if (targetId === "#") return // Skip for '#' links
   
         const targetElement = document.querySelector(targetId)
-  
         if (targetElement) {
-          // Close mobile menu if open
-          const navbarToggler = document.querySelector(".navbar-toggler")
-          const navbarCollapse = document.querySelector(".navbar-collapse")
-  
-          if (navbarCollapse.classList.contains("show")) {
-            navbarToggler.click()
-          }
-  
-          // Scroll to the target element
           window.scrollTo({
-            top: targetElement.offsetTop - 70, // Adjust for navbar height
+            top: targetElement.offsetTop - 70, // Offset for navbar height
             behavior: "smooth",
           })
+  
+          // Close mobile menu if open
+          const navbarCollapse = document.querySelector(".navbar-collapse")
+          if (navbarCollapse.classList.contains("show")) {
+            document.querySelector(".navbar-toggler").click()
+          }
         }
       })
     })
-  }
   
-  // Add animation to elements when they come into view
-  document.addEventListener("DOMContentLoaded", () => {
-    // Initialize AOS (Animate On Scroll) functionality manually
-    const sections = document.querySelectorAll("section")
+    // Back to top button
+    const backToTopButton = document.querySelector(".back-to-top")
   
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.1,
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add("show")
+      } else {
+        backToTopButton.classList.remove("show")
+      }
+    })
+  
+    backToTopButton.addEventListener("click", (e) => {
+      e.preventDefault()
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    })
+  
+    // Skills progress animation
+    const skillsSection = document.querySelector("#skills")
+    const progressBars = document.querySelectorAll(".progress-bar")
+  
+    function animateProgressBars() {
+      progressBars.forEach((bar) => {
+        const width = bar.parentElement.parentElement.querySelector(".skill-percentage").textContent
+        bar.style.width = "0"
+        setTimeout(() => {
+          bar.style.width = width
+        }, 200)
+      })
     }
   
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate")
-          // Stop observing after animation is triggered
-          observer.unobserve(entry.target)
+    // Animate progress bars when skills section is visible
+    let skillsSectionAnimated = false
+  
+    window.addEventListener("scroll", () => {
+      if (!skillsSectionAnimated && isElementInViewport(skillsSection)) {
+        animateProgressBars()
+        skillsSectionAnimated = true
+      }
+    })
+  
+    // Add animations for elements with data-aos attributes
+    const animatedElements = document.querySelectorAll("[data-aos]")
+  
+    function checkAnimations() {
+      animatedElements.forEach((element) => {
+        if (isElementInViewport(element) && !element.classList.contains("animated")) {
+          const animationType = element.getAttribute("data-aos")
+          element.classList.add("animated", animationType)
         }
       })
-    }, observerOptions)
+    }
   
-    sections.forEach((section) => {
-      observer.observe(section)
+    window.addEventListener("scroll", checkAnimations)
+    window.addEventListener("load", checkAnimations)
+  
+    // Typing effect for hero text
+    const heroTitle = document.querySelector(".hero-content h1")
+    const heroSubtitle = document.querySelector(".hero-content h2")
+    const heroText = document.querySelector(".hero-content .lead")
+  
+    function typeWriterEffect(element, text, speed = 100, delay = 0) {
+      if (!element) return
+  
+      const originalText = text || element.textContent
+      element.textContent = ""
+  
+      setTimeout(() => {
+        let i = 0
+        const timer = setInterval(() => {
+          if (i < originalText.length) {
+            element.textContent += originalText.charAt(i)
+            i++
+          } else {
+            clearInterval(timer)
+          }
+        }, speed)
+      }, delay)
+    }
+  
+    if (heroTitle && heroSubtitle && heroText) {
+      typeWriterEffect(heroTitle, null, 50, 500)
+      typeWriterEffect(heroSubtitle, null, 50, 1500)
+      typeWriterEffect(heroText, null, 30, 2500)
+    }
+  
+    // 3D tilt effect for project cards
+    const projectCards = document.querySelectorAll(".project-card")
+  
+    projectCards.forEach((card) => {
+      card.addEventListener("mousemove", (e) => {
+        const cardRect = card.getBoundingClientRect()
+        const cardCenterX = cardRect.left + cardRect.width / 2
+        const cardCenterY = cardRect.top + cardRect.height / 2
+  
+        const mouseX = e.clientX
+        const mouseY = e.clientY
+  
+        const rotateY = (mouseX - cardCenterX) / 20
+        const rotateX = (cardCenterY - mouseY) / 20
+  
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`
+      })
+  
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)"
+      })
     })
+  
+    // Apply similar hover effects to other cards
+    const allCards = document.querySelectorAll(".skills-card, .achievement-card, .contact-info, .contact-form-container")
+  
+    allCards.forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-5px)"
+        card.style.boxShadow = "0 15px 30px rgba(78, 84, 200, 0.15)"
+        card.style.borderColor = "rgba(78, 84, 200, 0.3)"
+      })
+  
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0)"
+        card.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.05)"
+        card.style.borderColor = "rgba(78, 84, 200, 0.1)"
+      })
+    })
+  
+    // Form submission handling
+    const contactForm = document.querySelector(".contact-form")
+  
+    if (contactForm) {
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault()
+  
+        // Simulate form submission
+        const submitButton = contactForm.querySelector('button[type="submit"]')
+        const originalText = submitButton.textContent
+  
+        submitButton.disabled = true
+        submitButton.textContent = "Sending..."
+  
+        // Simulate API call with timeout
+        setTimeout(() => {
+          // Success message
+          const formElements = contactForm.elements
+          for (let i = 0; i < formElements.length; i++) {
+            if (formElements[i].type !== "submit") {
+              formElements[i].value = ""
+            }
+          }
+  
+          submitButton.textContent = "Message Sent!"
+  
+          // Reset button after delay
+          setTimeout(() => {
+            submitButton.disabled = false
+            submitButton.textContent = originalText
+          }, 3000)
+        }, 1500)
+      })
+    }
+  
+    // Floating animation for hero elements
+    const floatingShape = document.querySelector(".floating-shape")
+    const codeWindow = document.querySelector(".code-window")
+  
+    function floatAnimation() {
+      if (floatingShape) {
+        floatingShape.style.animation = "float 6s ease-in-out infinite"
+      }
+  
+      if (codeWindow) {
+        codeWindow.style.animation = "float 8s ease-in-out infinite 1s"
+      }
+    }
+  
+    floatAnimation()
+  
+    // Helper function to check if element is in viewport
+    function isElementInViewport(el) {
+      if (!el) return false
+      const rect = el.getBoundingClientRect()
+      return rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 && rect.bottom >= 0
+    }
+  
+    // Initialize the page with initial animations
+    animatedElements.forEach((element) => {
+      element.style.opacity = "0"
+    })
+  
+    // Trigger initial animations after a short delay
+    setTimeout(() => {
+      checkAnimations()
+    }, 300)
   })
   
-  // Skills animation
-  document.addEventListener("DOMContentLoaded", () => {
-    const skillBars = document.querySelectorAll(".skill-progress .progress-bar")
-  
-    // Initially set width to 0
-    skillBars.forEach((bar) => {
-      bar.style.width = "0"
-    })
-  
-    // Animate when skills section comes into view
-    const skillsSection = document.getElementById("skills")
-  
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          // Animate skill bars
-          skillBars.forEach((bar) => {
-            const targetWidth = bar.getAttribute("style").split("width:")[1].trim()
-            bar.style.width = "0"
-            setTimeout(() => {
-              bar.style.transition = "width 1s ease-in-out"
-              bar.style.width = targetWidth
-            }, 200)
-          })
-  
-          // Stop observing
-          observer.unobserve(skillsSection)
-        }
-      },
-      { threshold: 0.5 },
-    )
-  
-    observer.observe(skillsSection)
-  })
-  
+  // Add necessary CSS for JavaScript animations
+  ;(function addDynamicStyles() {
+    const styleSheet = document.createElement("style")
+    styleSheet.textContent = `
+          .sparkle {
+              position: fixed;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              pointer-events: none;
+              z-index: 9999;
+              animation: sparkleAnimation 1s forwards;
+          }
+          
+          @keyframes sparkleAnimation {
+              0% {
+                  transform: scale(0);
+                  opacity: 1;
+              }
+              100% {
+                  transform: scale(20);
+                  opacity: 0;
+              }
+          }
+          
+          .cursor-effect {
+              position: fixed;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: rgba(78, 84, 200, 0.3);
+              transform: translate(-50%, -50%);
+              pointer-events: none;
+              z-index: 9999;
+              transition: width 0.3s, height 0.3s;
+          }
+          
+          .navbar-scrolled {
+              background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          }
+          
+          .back-to-top {
+              position: fixed;
+              right: 15px;
+              bottom: 15px;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              opacity: 0;
+              visibility: hidden;
+              transition: 0.3s;
+              z-index: 999;
+          }
+          
+          .back-to-top.show {
+              opacity: 1;
+              visibility: visible;
+          }
+          
+          @keyframes float {
+              0% {
+                  transform: translateY(0px);
+              }
+              50% {
+                  transform: translateY(-20px);
+              }
+              100% {
+                  transform: translateY(0px);
+              }
+          }
+          
+          /* Animation classes */
+          [data-aos] {
+              transition: opacity 0.8s, transform 0.8s;
+          }
+          
+          .animated {
+              opacity: 1 !important;
+          }
+          
+          .fade-left.animated {
+              transform: translateX(0);
+          }
+          
+          .fade-right.animated {
+              transform: translateX(0);
+          }
+          
+          .fade-up.animated {
+              transform: translateY(0);
+          }
+          
+          .fade-left {
+              transform: translateX(-50px);
+          }
+          
+          .fade-right {
+              transform: translateX(50px);
+          }
+          
+          .fade-up {
+              transform: translateY(50px);
+          }
+      `
+    document.head.appendChild(styleSheet)
+  })()
   
