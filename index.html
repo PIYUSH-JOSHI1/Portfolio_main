@@ -14,7 +14,11 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Piyush Joshi</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./images/Untitled_design__1_-removebg-preview.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                Piyush Joshi
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,7 +27,9 @@
                     <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hackathons">Hackathons</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -88,14 +94,22 @@ print(hello_world())
                         <div class="about-image-shape"></div>
                         <div class="about-image">
                             <div class="profile-placeholder">
-                                <i class="fas fa-user"></i>
+                                <img src="./images/Grayscale Circuit Board Twitter Post (4).png" alt="Piyush Joshi Hackathon Journey" class="hackathon-collage">
+                            </div>
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <div class="overlay-icon">
+                                        <i class="fas fa-expand-alt"></i>
+                                    </div>
+                                    <div class="overlay-text">Click to explore</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7" data-aos="fade-left">
                     <div class="about-content">
-                        <p class="lead">Aspiring Third-year B.Tech student with 15+ hackathon participations and 5 wins.</p>
+                        <p class="lead">Aspiring Third-year B.Tech student with 15+ hackathon participations and 8 wins.</p>
                         <p>I'm skilled in full-stack development (React.js, Node.js, Java), backend (Java, Flask, Python), DSA, Machine learning, and cloud technologies (AWS). Proficient in Git and GitHub.</p>
                         <p>Known for solving complex problems quickly and adapting to new technologies. I'm passionate about creating innovative solutions that make a real impact in people's lives.</p>
                         <div class="about-info mt-4">
@@ -136,29 +150,12 @@ print(hello_world())
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2>Education</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="timeline" data-aos="fade-up">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Technology in Computer Engineering</h3>
-                        <h4>G.H. Raisoni College Of Engineering And Management, Pune</h4>
-                        <span class="timeline-date">2022 - 2026</span>
-                        <p>Currently pursuing my degree with a strong focus on Operating Systems, Algorithms, Artificial Intelligence, and Machine Learning. Maintaining a Cumulative GPA of 8.37/10.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section-padding">
+
+
+
+
+    <section id="projects" class="section-padding bg-light">
         <div class="container">
             <div class="section-header text-center mb-5">
                 <h2>Projects</h2>
@@ -243,6 +240,323 @@ print(hello_world())
                     </div>
                 </div>
             </div>
+
+            <!-- View More Projects Section -->
+            <div id="extra-projects" class="row d-none" data-aos="fade-up">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <div class="project-placeholder">
+                                <i class="fas fa-vote-yea"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Bharat Voting System</h3>
+                            <p>The Bharat Voting System is an innovative digital voting platform developed to enhance the electoral process in India. This system integrates advanced technologies to ensure a secure, transparent, and efficient voting experience for citizens.</p>
+                            <div class="project-tech">
+                                <span>React.js</span>
+                                <span>Firebase</span>
+                                <span>API</span>
+                                <span>Chat bot</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/PIYUSH-JOSHI1/bharatvotingsystem" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://piyush-joshi1.github.io/bharatvotingsystem/home/index.html" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <div class="project-placeholder">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Readmission Prediction </h3>
+                            <p>machine learning-based web application designed to predict the likelihood of a patient being readmitted to a hospital within 30 days of discharge. This tool is particularly useful for healthcare providers aiming to identify high-risk patients </p>
+                            <div class="project-tech">
+                                <span>Streamlit</span>
+                                <span>Python</span>
+                                <span>Machine Learning </span>
+                                <span>DICOM</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/PIYUSH-JOSHI1/Readmission-Prediction" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://readmission.streamlit.app/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <div class="project-placeholder">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Probot</h3>
+                            <p>Probot is a web-based platform offering specialized chatbots for mental health support, business guidance, and career counseling. Each chatbot provides personalized advice and resources tailored to its respective domain. </p>
+                            <div class="project-tech">
+                                <span>OpenAI</span>
+                                <span>Botpress</span>
+                                <span>React.js</span>
+
+                                <span>WebHooks Api</span>
+
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/PIYUSH-JOSHI1/Probot" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://piyush-joshi1.github.io/Probot/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View More / View Less Button -->
+            <div class="text-center mt-4">
+                <button id="toggle-projects" class="btn btn-primary">View More</button>
+            </div>
+        </div>
+    </section>
+
+   <!-- Work Experience Section -->
+   <section id="experience" class="section-padding">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2>Work Experience</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="timeline" data-aos="fade-up">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Java Full Stack Developer</h3>
+                    <div class="company-info">
+                        <a href="https://brainovision.org/"><h4>BrainOvision</h4></a>
+                        <div class="icons-container">
+                            <a href="https://drive.google.com/file/d/1Dki7MIo3YTdl35wH5MtIQW03zEPs41TU/view?usp=sharing" title="View Certificate" class="icon-link" target="_blank" onmouseover="showCertificateTooltip(this)" onmouseout="hideCertificateTooltip(this)">
+                                <i class="fas fa-award" style="color: #a01aed; margin-left: 10px; margin-right:30px"></i>
+                            </a>
+                            <span class="location-container">
+                                <i class="fas fa-map-marker-alt" style="color: #6c63ff; margin-left: 10px;"></i>
+                                <span class="location-text">Pune, India</span>
+                            </span>
+                        </div>
+                    </div>
+                    <span class="timeline-date">September - November 2023</span>
+                    <p>Developed core banking system using Java & MySQL during a 6-week internship. Built user management & banking operations features including fund transfers & transaction tracking.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Campus Ambassador</h3>
+                    <div class="company-info">
+                        <a href="#"><h4>Mycaptain</h4></a>
+                        <div class="icons-container">
+                            <a href="https://drive.google.com/file/d/1O2IdEK1U2Hv82L7HKy0UAymYDT06tm71/view?usp=drive_link" title="View Certificate" class="icon-link">
+                                <i class="fas fa-award" style="color: #a919f7; margin-left: 10px;margin-right:40px"></i>
+                            </a>
+                            <span class="location-container">
+                                <i class="fas fa-map-marker-alt" style="color: #6c63ff; margin-left: 10px;"></i>
+                                <span class="location-text">Remote</span>
+                            </span>
+                        </div>
+                    </div>
+                    <span class="timeline-date">2023</span>
+                    <p>Served as Campus Ambassador for MyCaptain's HR program. Successfully managed student outreach and program representation on campus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add some CSS for better positioning -->
+    <style>
+        .company-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .icons-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .location-container {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+        
+        .location-text {
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        
+        .icon-link:hover {
+            opacity: 0.8;
+        }
+    </style>
+    
+    <!-- Font Awesome CDN for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</section>
+
+
+    <!-- Immersive Photo Viewer -->
+    <div id="immersive-viewer" class="immersive-viewer">
+        <div class="viewer-content">
+            <div class="viewer-header">
+                <h3 id="viewer-title">My Hackathon Journey</h3>
+                <div class="viewer-controls">
+                    <div class="viewer-control" id="viewer-zoom-in"><i class="fas fa-search-plus"></i></div>
+                    <div class="viewer-control" id="viewer-zoom-out"><i class="fas fa-search-minus"></i></div>
+                    <div class="viewer-control" id="viewer-rotate"><i class="fas fa-sync-alt"></i></div>
+                    <div class="viewer-control viewer-close"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+            <div class="viewer-image-container">
+                <img id="viewer-image" src="./images/purple jhallosh.jpg" alt="Enlarged Image">
+                <div class="image-hotspots">
+                    <div class="hotspot" data-info="Rakathon 2024 – 1st Prize Winner (₹1,00,000)
+                    AI-powered Mental Health Supporter for real-time monitoring & therapy" style="top: 20%; left: 28%;">
+                    
+                                            <div class="hotspot-dot"></div>
+                        <div class="hotspot-tooltip">Rackathon Winner</div>
+                    </div>
+                    <div class="hotspot" data-info="Next-Niche Hackathon – 2nd Runner-up
+                    Project: ChatBro – Multitasking AI-powered chatbot assistant" style="top: 20%; left: 45%;">
+                                            <div class="hotspot-dot"></div>
+                        <div class="hotspot-tooltip">Next-Niche</div>
+                    </div>
+                    <div class="hotspot" data-info="International Innovation Challenge - Secured 4th place globally with our blockchain solution" style="top: 35%; left: 25%;">
+                        <div class="hotspot-dot"></div>
+                        <div class="hotspot-tooltip">IIC Challenge</div>
+                    </div>
+                    <div class="hotspot" data-info="Smart India Hackathon – Grand Finale Qualifier (Chennai)
+                    Project: Cogno Solution – AI-powered Mental Health Assistant
+                    Selected for national-level digital well-being track" style="top: 20%; left: 55%;">
+                                            <div class="hotspot-dot"></div>
+                        <div class="hotspot-tooltip">SIH</div>
+                    </div>
+                    <div class="hotspot" data-info="Tantra Tech Fest – Winner at SPPU University, Pune
+                    Awarded for fastest website development in healthcare sector
+                    Recognized for innovation in medical web tech" style="top: 40%; left: 49%;">
+                                            <div class="hotspot-dot"></div>
+                        <div class="hotspot-tooltip">Tantra</div>
+                    </div>
+                    <div class="hotspot" data-info="Purple Jhallosh – 1st Prize Winner (₹25,000)
+                    AI solution for cognitive disorder support in children
+                    Awarded by Maharashtra Governor Dr. Radhakrishnan" style="top: 40%; left: 55%;">
+                                            <div class="hotspot-dot"></div>
+                        <div class="hotspot-tooltip">Purple Jhallosh</div>
+                    </div>
+                    <div class="hotspot" data-info="Track-V – AI-based Traffic Flow Optimization
+                    Project: Green signal time prediction and optimization
+                    Conducted field research at Pune Police HQ to identify real-world traffic issues" style="top: 40%; left: 44%;">
+                                            <div class="hotspot-dot"></div>
+                        <div class="hotspot-tooltip">Track-V </div>
+                    </div>
+                </div>
+            </div>
+            <div class="viewer-info">
+                <div class="viewer-description">
+                    <p id="viewer-description-text">Explore my hackathon journey spanning over 15+ competitions and 8 wins at national and international levels. Click on the highlighted points to learn more about specific achievements.</p>
+                </div>
+                <div class="viewer-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">15+</div>
+                        <div class="stat-label">Hackathons</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Wins</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">4th</div>
+                        <div class="stat-label">International Rank</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Education</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="timeline" data-aos="fade-up">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Technology in Computer Engineering</h3>
+                        <h4>G.H. Raisoni College Of Engineering And Management, Pune</h4>
+                        <span class="timeline-date">2022 - 2026</span>
+                        <p>Currently pursuing my degree with a strong focus on Operating Systems, Algorithms, Artificial Intelligence, and Machine Learning. Maintaining a Cumulative GPA of 8.37/10.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hackathons Section -->
+    <section id="hackathons" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Hackathon Wins</h2>
+                <div class="section-divider"></div>
+                <p class="section-subheading">Glimpses of my hackathon journey</p>
+            </div>
+            
+            <div class="hackathon-gallery" data-aos="fade-up">
+                <div class="row hackathon-row">
+                    <!-- Initial visible hackathons (first 3) -->
+                    <!-- Will be populated by JavaScript -->
+                </div>
+                
+                <div class="row hackathon-row-extra d-none">
+                    <!-- Extra hackathons (hidden initially) -->
+                    <!-- Will be populated by JavaScript -->
+                </div>
+                
+                <div class="text-center mt-4">
+                    <button id="toggle-hackathons" class="btn btn-primary">View More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Certifications</h2>
+                <div class="section-divider"></div>
+                <p class="section-subheading">Professional credentials that enhance my expertise</p>
+            </div>
+            
+            <div class="row" data-aos="fade-up">
+                <div class="col-lg-12">
+                    <div class="certifications-container">
+                        <!-- Certifications will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -287,7 +601,7 @@ print(hello_world())
                         <div class="skill-item">
                             <div class="skill-info">
                                 <h4>C/C++</h4>
-                                <div class="skill-percentage">75%</div>
+                                <div class="skill-percentage">95%</div>
                             </div>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" style="width: 75%"></div>
@@ -351,37 +665,9 @@ print(hello_world())
         </div>
     </section>
 
-    <!-- Work Experience Section -->
-    <section id="experience" class="section-padding">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2>Work Experience</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="timeline" data-aos="fade-up">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Java Full Stack Developer</h3>
-                        <h4>BrainOvision</h4>
-                        <span class="timeline-date">September - November 2023</span>
-                        <p>Developed core banking system using Java & MySQL during a 6-week internship. Built user management & banking operations features including fund transfers & transaction tracking.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Campus Ambassador</h3>
-                        <h4>Mycaptain</h4>
-                        <span class="timeline-date">2023</span>
-                        <p>Served as Campus Ambassador for MyCaptain's HR program. Successfully managed student outreach and program representation on campus.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
 
-    <!-- Achievements Section -->
+    <!-- Achievements Section
     <section id="achievements" class="section-padding bg-light">
         <div class="container">
             <div class="section-header text-center mb-5">
@@ -415,92 +701,154 @@ print(hello_world())
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2>Contact Me</h2>
-                <div class="section-divider"></div>
-                <p class="section-subheading">Get in touch for opportunities or collaboration</p>
-            </div>
-            <div class="row" data-aos="fade-up">
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Email</h3>
-                                <p>piyushaundhekar@gmail.com</p>
-                            </div>
+<section id="contact" class="section-padding">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2>Contact Me</h2>
+            <div class="section-divider"></div>
+            <p class="section-subheading">Get in touch for opportunities or collaboration</p>
+        </div>
+        <div class="row" data-aos="fade-up">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Phone</h3>
-                                <p>+91 7588322212</p>
-                            </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>
+                                <a href="mailto:piyushaundhekar@gmail.com">piyushaundhekar@gmail.com</a>
+                            </p>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Location</h3>
-                                <p>Pune, Maharashtra, India</p>
-                            </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-share-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Social Profiles</h3>
-                                <div class="social-links">
-                                    <a href="https://www.linkedin.com/in/PIYUSH-JOSHI1" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://github.com/PIYUSH-JOSHI1" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                                    <a href="https://x.com/PiyushJosh7588" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                                </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+917588322212" onclick="alert('Calling Piyush Joshi...')">+91 7588322212</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>
+                                <a href="https://ghrcemp.raisoni.net/" target="_blank">
+                                    GHRCEM, Pune
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Social Profiles</h3>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/PIYUSH-JOSHI1" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/PIYUSH-JOSHI1" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="https://x.com/PiyushJosh7588" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="contact-form-container">
-                        <form class="contact-form">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Your Name" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Your Email" required>
-                                    </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                                 </div>
                             </div>
-                            <div class="form-group mb-3">
-                                <input type="text" class="form-control" placeholder="Subject" required>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                                </div>
                             </div>
-                            <div class="form-group mb-4">
-                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
+                        <div id="formMessage" class="mt-3 text-center" style="display: none;"></div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const formMessage = document.getElementById('formMessage');
+    const originalText = submitButton.textContent;
+    
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+    formMessage.style.display = 'none';
+    
+    // Get form data
+    const formData = new FormData(form);
+    const data = {
+        name: formData.get('name'),
+       
+        subject: formData.get('subject'),
+        email: formData.get('email'),
+        message: formData.get('message')
+    };
+    
+    // SMTP Email sending using EmailJS (you'll need to set up an account)
+    emailjs.send('service_zmzzcso', 'template_zj1nn6c', data)
+        .then(function(response) {
+            formMessage.textContent = 'Message sent successfully!';
+            formMessage.style.color = 'green';
+            formMessage.style.display = 'block';
+            form.reset();
+            
+            submitButton.textContent = "Message Sent!";
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }, 3000);
+        }, function(error) {
+            formMessage.textContent = 'Failed to send message. Please try again later.';
+            formMessage.style.color = 'red';
+            formMessage.style.display = 'block';
+            
+            submitButton.disabled = false;
+            submitButton.textContent = originalText;
+        });
+});
+</script>
+
+<!-- Add EmailJS library -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your User ID
+    (function() {
+        emailjs.init('OOGk61oWp7LoeFcZu');
+    })();
+</script>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -517,7 +865,9 @@ print(hello_world())
                         <ul>
                             <li><a href="#hero">Home</a></li>
                             <li><a href="#about">About</a></li>
+                            <li><a href="#hackathons">Hackathons</a></li>
                             <li><a href="#projects">Projects</a></li>
+                            <li><a href="#certifications">Certifications</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
@@ -526,9 +876,9 @@ print(hello_world())
                     <div class="footer-social">
                         <h4>Connect With Me</h4>
                         <div class="social-icons">
-                          <a href="https://www.linkedin.com/in/PIYUSH-JOSHI1" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://github.com/PIYUSH-JOSHI1" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                                    <a href="https://x.com/PiyushJosh7588" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/PIYUSH-JOSHI1" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/PIYUSH-JOSHI1" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="https://x.com/PiyushJosh7588" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -543,6 +893,24 @@ print(hello_world())
 
     <!-- Back to top button -->
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Hackathon Modal -->
+    <div id="hackathon-modal" class="modal-container">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Hackathon Details</h3>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="/placeholder.svg" alt="Hackathon Image" class="modal-image">
+                <div id="modal-description" class="modal-description"></div>
+                <div id="modal-tech-stack" class="modal-tech-stack"></div>
+                <div class="modal-actions">
+                    <a id="modal-link" href="#" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
